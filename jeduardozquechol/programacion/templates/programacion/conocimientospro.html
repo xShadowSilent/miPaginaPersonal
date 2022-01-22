@@ -1,0 +1,48 @@
+{%extends 'core/base.html'%}
+{%block title %} PROGRAMACIÓN {%endblock%}
+{%load static%}
+
+{%block content %}
+
+
+<!-- Page Preloder -->
+<div id="preloder">
+	<div class="loader"></div>
+</div>
+<br>
+<section class="playlist-section spad">
+	<div class="container-fluid">
+		<div class="section-title">
+			<h2>Mis conocimientos en programación</h2>
+		</div>
+	</div>
+</section>
+
+
+
+{%for programacion in programaciones reversed %}
+
+
+	<!-- conocimientos section -->
+	<section class="conocimientos-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="sub-text">
+						<h2>{{programacion.title}}</h2>
+						<h3>{{programacion.subtitle}}</h3>
+						<p>{{programacion.content|safe}}</p>
+						
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<img class="ss-thumb" src="{{programacion.image.url}}" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- conocimientos section end -->
+	{%endfor%}
+
+
+{%endblock%}

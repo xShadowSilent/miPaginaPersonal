@@ -1,0 +1,72 @@
+{%extends 'core/base.html'%}
+{%block title %} CONTÁCTAME {%endblock%}
+{%load static%}
+
+{%block content %}
+
+
+<div id="preloder">
+	<div class="loader"></div>
+</div>
+
+
+
+<!-- Contact section -->
+<section class="contact-section">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 p-0">
+
+
+				<div class="map">
+
+					<img src="{% static 'core/img/tec.png' %}" alt="">
+				</div>
+			</div>
+			<div class="col-lg-6 p-0">
+				<div class="contact-warp">
+					<div class="section-title mb-0">
+						<h2>Contáctame</h2>
+					</div>
+					<p>Me pondré en contacto lo antes posible</p>
+
+					{%if 'ok' in request.GET%}
+					<p><b>Su mensaje se envió correctamente</b></p>
+					{%elif 'fail' in request.GET%}
+					<p><b>¡Algo no ha salido bien!</b></p>
+					{%endif%}
+
+
+					<form class="contact-from" action="" method="POST">
+						{%csrf_token%}
+						<div class="row">
+							<div class="col-md-6">
+
+								{{form.name}}
+							</div>
+							{{form.name.errors}}
+							<div class="col-md-6">
+
+								{{form.email}}
+							</div>
+							{{form.email.errors}}
+							<div class="col-md-12">
+
+								{{form.subject}}
+
+								{{form.content}}
+								<button class="site-btn">Enviar</button>
+							</div>
+							{{form.subject.errors}}
+							{{form.content.errors}}
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Blog section end -->
+
+{%endblock%}

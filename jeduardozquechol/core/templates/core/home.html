@@ -1,0 +1,172 @@
+{%extends 'core/base.html'%}
+{%block title %} INICIO {%endblock%}
+
+{%load static%}
+
+{%block content %}
+
+
+
+<!-- Page Preloder -->
+<div id="preloder">
+	<div class="loader"></div>
+</div>
+
+
+<!-- Hero section -->
+<section class="hero-section">
+	<div class="hero-slider owl-carousel">
+		<div class="hs-item">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="hs-text">
+							<h2><span>Hola, </span>soy</h2>
+							<h3>José <span>Eduardo</span> Zamora <span> Quechol</span></h3>
+
+							<br><br><br>
+							<a href="{% url 'contact' %}" class="site-btn">Contáctame</a>
+
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="hr-img">
+							<img src="{% static 'core/img/hero-bg.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hs-item">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="hs-text">
+							<h2><span>Hola, </span> soy</h2>
+
+							<h3>José <span>Eduardo</span> Zamora <span> Quechol</span></h3>
+							<br><br><br>
+							<a href="{% url 'contact' %}" class="site-btn sb-c2">Contáctame</a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="hr-img">
+							<img src="{% static 'core/img/hero-bg.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Hero section end -->
+
+<!-- Intro section -->
+<section class="intro-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="section-title">
+					<h2>¿Quién es?</h2>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<p>José Eduardo Zamora Quechol es un Ingeniero en Tecnologías de la información recién egresado de
+						la Universidad Politécnica de Tlaxcala, que está preparado para usar sus
+						habilidades adquiridas durante su aprendizaje.</p>
+						<a href="{% url 'about' %}" class="site-btn">Acerca de</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Intro section end -->
+
+<!-- How section -->
+<section class="how-section spad set-bg" data-setbg="img/how-to-bg.jpg">
+	<div class="container text-white">
+		<div class="section-title">
+			<h2>Algunos conocimientos</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="how-item">
+					<div class="hi-icon">
+						<img src="{% static 'core/img/icons/brain.png' %}" alt="">
+					</div>
+					<h4>Cobol</h4>
+					<p>Estamos rodeados de COBOL: se ejecuta en más del 70 % de las transacciones de negocios del mundo. </p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="how-item">
+					<div class="hi-icon">
+						<img src="{% static 'core/img/icons/pointer.png' %}" alt="">
+					</div>
+					<h4>PHP</h4>
+					<p>Uno de los principales beneficios del Desarrollo Web con PHP 
+						es que es independiente de la plataforma, lo que significa que 
+						se puede usar en Mac OS, Windows, Linux y es compatible con la mayoría de los navegadores web. </p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="how-item">
+					<div class="hi-icon">
+						<img src="{% static 'core/img/icons/proteger.png' %}" alt="">
+					</div>
+					<h4>Ciberseguridad</h4>
+					<p>Hoy en día, todos nos conectamos a internet, por lo que es importante saber protegernos ante ciberamenazas</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- How section end -->
+
+<!-- Concept section -->
+<section class="concept-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="section-title">
+					<h2>Mi objetivo</h2>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<p>Alcanzar logros dentro de la empresa, empleando lo aprendido dentro de mi
+					formación académica, contribuyendo a mi experiencia profesional, actitud, valores
+					y ética, ofreciendo soluciones y cumpliendo retos que la empresa me solicite.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-sm-6">
+				<div class="concept-item">
+					<img src="{% static 'core/img/concept/1.jpg' %}" alt="">
+					<h5>El único modo </h5>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="concept-item">
+					<img src="{% static 'core/img/concept/2.jpg' %}" alt="">
+					<h5>de hacer un gran </h5>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="concept-item">
+					<img src="{% static 'core/img/concept/3.jpg' %}" alt="">
+					<h5>trabajo es amar </h5>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="concept-item">
+					<img src="{% static 'core/img/concept/4.jpg' %}" alt="">
+					<h5>lo que haces - Steve Jobs</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Concept section end -->
+
+
+
+{%endblock%}

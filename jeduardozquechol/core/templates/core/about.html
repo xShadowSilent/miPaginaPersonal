@@ -1,0 +1,64 @@
+{%extends 'core/base.html'%}
+{%block title %} ACERCA DE {%endblock%}
+{%load static%}
+
+{%block content %}
+
+
+<!-- Page Preloder -->
+<div id="preloder">
+	<div class="loader"></div>
+</div>
+
+
+
+<section class="playlist-section spad">
+	<div class="container-fluid">
+		<div class="section-title">
+			<h2>Acerca de</h2>
+		</div>
+
+
+	</div>
+</section>
+
+
+<!-- quiensoy section -->
+<section class=" spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="sub-text">
+					<h2>¿Quién soy?</h2>
+
+					<p>José Eduardo Zamora Quechol es un Ingeniero en Tecnologías de la información recién egresado de
+						la Universidad Politécnica de Tlaxcala, que está preparado para usar sus
+						habilidades adquiridas durante su aprendizaje. </p>
+
+					<h2>Objetivo</h2>
+
+					<p>Alcanzar logros dentro de la empresa, empleando lo aprendido dentro de mi
+						formación académica, contribuyendo a mi experiencia profesional, actitud, valores
+						y ética, ofreciendo soluciones y cumpliendo retos que la empresa me solicite. </p>
+
+				</div>
+			</div>
+			<div class="col-lg-6">
+
+				<ul class="sub-list">
+					<li>Competencias</li>
+					<li><img src="{% static 'core/img/icons/check-icon.png' %}" alt="">Responsable</li>
+					<li><img src="{% static 'core/img/icons/check-icon.png' %}" alt="">Trabajo en equipo </li>
+					<li><img src="{% static 'core/img/icons/check-icon.png' %}" alt="">Organización</li>
+					<li><img src="{% static 'core/img/icons/check-icon.png' %}" alt="">Compromiso</li>
+					<li><img src="{% static 'core/img/icons/check-icon.png' %}" alt="">Adaptabilidad</li>
+					<li><img src="{% static 'core/img/icons/check-icon.png' %}" alt="">Responsabilidad</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- quiensoy section end -->
+
+{%endblock%}

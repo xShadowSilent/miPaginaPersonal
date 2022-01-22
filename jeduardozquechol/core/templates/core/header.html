@@ -1,0 +1,25 @@
+{%load static%}
+
+{%block header %}
+
+<header class="header-section clearfix">
+	<a href="{% url 'home' %}" class="site-logo">
+		<img src="{% static 'core/img/logo.png' %}" alt="">
+	</a>
+
+	<ul class="main-menu">
+		<li><a href="{% url 'home' %}">Inicio</a></li>
+		<li><a href="{% url 'about' %}">Acerca de</a></li>
+		<li><a href="#">Mis conocimientos</a>
+			<ul class="sub-menu">
+				<li ><a href="{% url 'conocimientospro' %}">Programación</a></li>
+				<li><a href="{% url 'conocimientosweb' %}">Programación web</a></li>
+				<li ><a href="{% url 'conocimientoshacking' %}">Hacking ético</a></li>
+			</ul>
+		</li>
+		<li><a href="{% url 'blog' %}">Blog</a></li>
+		<li><a href="{% url 'contact' %}">Contáctame</a></li>
+	</ul>
+</header>
+
+{%endblock%}

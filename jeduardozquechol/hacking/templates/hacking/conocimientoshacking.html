@@ -1,0 +1,46 @@
+{%extends 'core/base.html'%}
+{%block title %} HACKING ÉTICO {%endblock%}
+{%load static%}
+
+{%block content %}
+
+
+<!-- Page Preloder -->
+<div id="preloder">
+	<div class="loader"></div>
+</div>
+
+<section class="playlist-section spad">
+	<div class="container-fluid">
+		<div class="section-title">
+			<h2>Mis conocimientos en programación</h2>
+		</div>
+	</div>
+</section>
+
+{%for hack in hacks reversed %}
+
+
+	<!-- conocimientos section -->
+	<section class="conocimientos-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="sub-text">
+						<h2>{{hack.title}}</h2>
+						<h3>{{hack.subtitle}}</h3>
+						<p>{{hack.content|safe}}</p>
+						
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<img class="ss-thumb" src="{{hack.image.url}}" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- conocimientos section end -->
+	{%endfor%}
+
+
+{%endblock%}

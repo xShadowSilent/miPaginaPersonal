@@ -1,0 +1,40 @@
+{%extends 'core/base.html'%}
+{%block title %} BLOG {%endblock%}
+{%load static%}
+
+{%block content %}
+
+
+
+<!-- Page Preloder -->
+<div id="preloder">
+	<div class="loader"></div>
+</div>
+
+
+{%for post in category.get_posts.all %}
+	<!-- category section -->
+	<section class="blog-section spad">
+		<div class="container">
+			<!-- category post -->
+			<div class="blog-item">
+				<img src="{{post.image.url}}" alt="">
+				<div class="blog-date">{{post.published|date}}</div>
+				<h3>{{post.title}}</h3>
+				<div class="blog-meta">by <a href="">admin</a> in 
+					<em><a href="{%url 'category' category.id%}" class="link">	
+						{%for category in post.categories.all %}
+						{{ category.name }} {%if not forloop.last%},{%endif%}
+						{%endfor%}
+					</a></em>
+				</div>
+
+				
+				<p>{{post.content|safe}} </p>
+			</div>
+
+		</div>
+	</section>
+	<!-- category section end -->
+{%endfor%}
+{%endblock%}
